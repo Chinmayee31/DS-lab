@@ -1,0 +1,34 @@
+//tkinter
+import tkinter
+import random
+window=title("program 9")
+window.geometry("300x250")
+message=stringVar()
+lab1=label(window,text="randomly assigning programs to students")
+lab1.grid(row=0)
+lab2=label(window,text="enter the number of students:")
+lab2.grid(row=1,column=0)
+students=Entry(window)
+students.grid(row=1,column=1,pady=15)
+lab3=label(window,text="enter the no of programs:")
+lab3.grid(row=2,column=0)
+programs=Entry(window)
+programs.grid(row=2,column=1)
+lab4=label(window,textvariable=message)
+lab4.grid(row=4)
+def buttonClick():
+    no_of_studs=students.get()
+    no_of_programs=programs.get()
+    data=""
+    if no_of_studs.isdigit() and no_of_programs.isdigit():
+        for i in range[1,int(no_of_studs)+1):
+            data+="Students"+str(i)+","+"program"+str(random.randrange(1,programs+1)]
+        file=open("Students.csv","w")
+        file.close()
+        message.set("file(Student.csv)is ready,you can open it")
+    else:
+        message.set("invalid")
+btn=Button(window,text="submit",command=buttonClicked)
+btn.grid(row=3)
+window.mainloop()
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
