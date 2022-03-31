@@ -1,0 +1,21 @@
+print("hint:gfdvfbbcbbcbvb")
+w="apple"
+turns=len(w)+1
+guess=["_"]*len(w)
+while turns>0:
+  print(guess)
+  letter=input("guess the letter")
+  if letter in w:
+    for index in range (len(w)):
+      if w[index]==letter:
+        guess[index]=letter
+  else:
+    print("wrong guess")
+    turns-=1
+    print("remaining turns:",turns)
+  if list(w)==guess:
+    print("you won!")
+    break
+  if turns==0:
+    print("you lost:(")
+    break
