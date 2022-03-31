@@ -39,9 +39,9 @@ file=open("meaning.json")
 dictionary=jason.load(file)
 word=input("enter the word")
 if word in dictionary.keys():
-    print("meaning of the word:",word,"_",dictinary.[word])
+    print("meaning of the word:",word,"_",dictinary[word])
 else:
-    similar=diffliub.get_close_matches(word,dictionary.keys)
+    similar=diffliub.get_close_matches(word,dictionary.keys())
     if len(similar)>0:
         similar=similar[10]
         print("did u mean ",similar,"?say yes or no")
