@@ -1,0 +1,28 @@
+//4a)
+str=input("enter the string")
+reverse=str[::-1]
+print("the reverse of the string:",reverse)
+str1=reverse.replace(" ","")
+evenstr=str1[1::2]
+print("required string:",evenstr)
+
+//4b)
+s=input("enter the string:")
+start=0
+end=s.find(";")
+while end!=-1:
+  print(s[start:end])
+  start=end+1
+  end=s.find(";",start)
+print(s[start:])
+
+//4c)
+d={}
+s=input("enter the string: ")
+for char in s:
+  if char in d.keys():
+    d[char]+=1
+  else:
+    d[char]=1
+print(d)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
