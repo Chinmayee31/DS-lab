@@ -3,7 +3,7 @@ path=os.walk("F:/Chinmayee/files")
 filecount=0
 foldercount=0
 for root,subdirectories,file in path:
-    print("rrot",root)
+    print("root",root)
     print("subdirectories",subdirectories)
     print("file",file)
     filecount+=len(file)
