@@ -41,3 +41,35 @@ printf(“The nodes reachable from
 dfs(source);
 }
 }
+----------------------------------------------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+#include<conio.h>
+
+void bfs(int a[10][10], int n, int u)
+{
+	int	f,r,q[10],v;
+	int 	s[10]={0};
+	printf("The nodes visited from %d:",u);
+	f=0, r=-1;
+	q[++r]=u; 
+	s[u]=1; 
+	printf("%d",u);
+	while(f<=r)
+	{
+		u=q[f++];  
+		for(v=0; v<n; v++)
+		{
+			if(a[u][v]==1)		
+			{
+				if(s[v]==0)  
+				{
+					printf("%d",v); 
+					s[v]=1;		
+					q[++r]=v;	
+				}
+			}
+		}
+	}
+	printf("\n");
+}
+
